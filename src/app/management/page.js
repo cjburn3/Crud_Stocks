@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { db } from 'firebase.config';
 import { getAllDocuments, addDocument, deleteDocument, updateDocument } from '../utils/firebaseUtils';
 
-import LoginForm from "@/components/LoginForm";
-import LogoutButton from "@/components/LogoutButton";
-import RegisterForm from "@/components/RegisterForm";
+import LoginForm from "@/app/components/LoginForm";
+import LogoutButton from "@/app/components/LogoutButton";
+import RegisterForm from "@/app/components/RegisterForm";
 
 export default function Management() {
   const [stocks, setStocks] = useState([]);
