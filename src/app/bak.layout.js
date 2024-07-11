@@ -1,8 +1,6 @@
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link';
-import LoginForm from "./components/LoginForm"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +14,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={inter.className}>
+        
+        <div className='flex justify-center m-2' >
+          
+          <Link className="m-3" href="/">Stocks List</Link>
+          <Link href="/management">Create Stock</Link>
+        </div>
 
-     {children}
+        {children}
+
       </body>
     </html>
   );

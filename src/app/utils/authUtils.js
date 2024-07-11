@@ -3,10 +3,10 @@ import {
     signInWithEmailAndPassword,
     signOut, getAuth
   } from "firebase/auth";
-  
-  const auth = getAuth();
-  
-  // import { auth } from "../../firebase.config";
+
+  import { app } from "../../../firebase.config";
+
+  const auth = getAuth(app);
   
   async function registerUser(email, password) {
     createUserWithEmailAndPassword(auth, email, password)

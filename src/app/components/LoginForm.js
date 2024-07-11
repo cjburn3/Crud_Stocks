@@ -1,6 +1,10 @@
+"use client"
+
 import { useState } from "react";
-import { login } from "@/utils/authUtils";
+import { login } from "../utils/authUtils";
+
 const LoginForm = () => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,7 +15,7 @@ const LoginForm = () => {
     console.log("Password:", password);
     await login(email, password);
   };
-
+  
   return (
     <div className="flex items-center justify-center min-h-screen bg-emerald-50">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded shadow-lg">
